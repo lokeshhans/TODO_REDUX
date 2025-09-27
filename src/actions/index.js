@@ -11,5 +11,4 @@ export const removeTodo = (todoId) =>({
 export const editTodo = (todo) =>({
     type: EDIT_TODO,
     payload:todo
-}) 
-git 
+});

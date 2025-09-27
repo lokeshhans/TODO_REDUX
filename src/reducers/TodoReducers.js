@@ -1,5 +1,16 @@
 import {ADD_TODO,EDIT_TODO,REMOVE_TODO} from '../constants/index'
-function todoReducer(todos = [], action){
+
+const initialState = [
+//     {
+//     id:1,
+//     title:'lokesh'
+// },
+// {
+//     id:2,
+//     title:'manish'
+// }
+]
+function todoReducer(todos = initialState, action){
     if(action.type == ADD_TODO){
         return [ ...todos,{id:action.payload.id, title:action.payload.title}]
     }
@@ -14,5 +25,6 @@ function todoReducer(todos = [], action){
             return todo
             })
     }
-    return todos
+    return todos;
 }
+export default todoReducer;
